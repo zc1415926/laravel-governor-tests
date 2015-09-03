@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c6026b96e6fa11a641b51a6ba976f5e",
+    "hash": "7644c5cb8fa71693885f347a05a4e880",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -217,6 +217,53 @@
             "time": "2014-12-20 21:24:13"
         },
         {
+            "name": "genealabs/jumpstart",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeneaLabs/Jumpstart.git",
+                "reference": "958858f63d39dd2ac48d9a9d71eff7c4f6da94a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeneaLabs/Jumpstart/zipball/958858f63d39dd2ac48d9a9d71eff7c4f6da94a2",
+                "reference": "958858f63d39dd2ac48d9a9d71eff7c4f6da94a2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^5.1",
+                "illuminate/filesystem": "^5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GeneaLabs\\Jumpstart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Bronner",
+                    "email": "mike@genealabs.com"
+                }
+            ],
+            "description": "Provides the missing views and other functionality to jumpstart your Laravel project.",
+            "homepage": "http://www.github.com/genealabs/jumpstart",
+            "keywords": [
+                "jumpstart",
+                "laravel",
+                "missing"
+            ],
+            "time": "2015-08-16 16:13:24"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -363,16 +410,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.13",
+            "version": "v5.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2226a0abfe3776c5023601e59d496784d1de21fd"
+                "reference": "f8ec5074bcd4e6dc1fb310ce2ff23181cbf4dc4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2226a0abfe3776c5023601e59d496784d1de21fd",
-                "reference": "2226a0abfe3776c5023601e59d496784d1de21fd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f8ec5074bcd4e6dc1fb310ce2ff23181cbf4dc4f",
+                "reference": "f8ec5074bcd4e6dc1fb310ce2ff23181cbf4dc4f",
                 "shasum": ""
             },
             "require": {
@@ -487,7 +534,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-09-02 16:18:46"
+            "time": "2015-09-03 14:12:36"
         },
         {
             "name": "league/flysystem",

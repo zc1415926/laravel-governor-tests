@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: LaravelGovernor
+        psr4_prefix: LaravelGovernor
         src_path: app
