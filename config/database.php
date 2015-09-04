@@ -48,7 +48,7 @@ return [
 
         'sqlite' => [
             'driver'   => 'sqlite',
-            'database' => env('DB_DATABASE', ':memory:') === ":memory:" ? ":memory" : storage_path(env('DB_DATABASE')),
+            'database' => env('DB_DATABASE', ':memory:') === ":memory:" ? ":memory:" : storage_path(env('DB_DATABASE')),
             'prefix'   => '',
         ],
 
