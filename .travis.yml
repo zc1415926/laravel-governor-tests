@@ -7,14 +7,12 @@ php:
   - 5.6
   - 7.0
 
-install:
-  - composer require satooshi/php-coveralls:~0.6@stable
-
 # Commands to be run before your environment runs.
 before_script:
   - mkdir -p build/logs
   - composer self-update
   - composer install --prefer-source --no-interaction
+  - composer require satooshi/php-coveralls:~0.6@stable
 
 # Commands you want to run that will verify your build.
 script:
