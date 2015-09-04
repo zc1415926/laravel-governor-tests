@@ -1,3 +1,0 @@
-[submodule "packages/genealabs/laravel-governor"]
-	path = packages/genealabs/laravel-governor
-	url = git@github.com:GeneaLabs/laravel-governor.git
