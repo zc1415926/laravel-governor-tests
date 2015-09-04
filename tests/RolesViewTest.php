@@ -6,7 +6,7 @@ class RolesViewTest extends TestCase
 
     public function prepare()
     {
-        $this->artisan('migrate', ['--path' => 'vendor/genealabs/laravel-governor/database/migrations']);
+        $this->artisan('migrate', ['--path' => 'packages/genealabs/laravel-governor/database/migrations']);
         $this->user = factory(LaravelGovernorTests\User::class)->create();
         $this->artisan('db:seed', ['--class' => 'LaravelGovernorDatabaseSeeder']);
     }
