@@ -8,10 +8,19 @@ php:
   - 7.0
   - hhvm
 
+# Handle git submodules yourself
+git:
+  submodules: false
+
+# Use sed to replace the SSH URL with the public URL, then initialize submodules
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init --recursive
+
 # Commands to be run before your environment runs.
 before_script:
   - composer self-update
-  - composer install --prefer-source --no-interaction --dev
+  - composer install --prefer-source --no-interaction
 
 # Commands you want to run that will verify your build.
 script: phpunit
