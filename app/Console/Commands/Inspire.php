@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Console\Commands;
+namespace LaravelGovernorTests\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

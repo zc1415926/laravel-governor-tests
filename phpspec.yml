@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: LaravelGovernor
-        psr4_prefix: LaravelGovernor
+        namespace: LaravelGovernorTests
+        psr4_prefix: LaravelGovernorTests
         src_path: app

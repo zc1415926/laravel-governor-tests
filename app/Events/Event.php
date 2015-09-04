@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Events;
+namespace LaravelGovernorTests\Events;
 
 abstract class Event
 {

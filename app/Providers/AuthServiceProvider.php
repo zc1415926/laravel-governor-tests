@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Providers;
+namespace LaravelGovernorTests\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'LaravelGovernor\Model' => 'LaravelGovernor\Policies\ModelPolicy',
+        'LaravelGovernorTests\Model' => 'LaravelGovernorTests\Policies\ModelPolicy',
     ];
 
     /**

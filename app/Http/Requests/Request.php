@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Http\Requests;
+namespace LaravelGovernorTests\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

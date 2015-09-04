@@ -7,7 +7,8 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "genealabs/jumpstart": "^0.1.4"
+        "genealabs/jumpstart": "^0.1.4",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -17,10 +18,12 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "packages/genealabs/laravel-governor/database"
         ],
         "psr-4": {
-            "LaravelGovernor\\": "app/"
+            "LaravelGovernorTests\\": "app/",
+            "GeneaLabs\\LaravelGovernor\\": "packages/genealabs/laravel-governor/src/"
         }
     },
     "autoload-dev": {

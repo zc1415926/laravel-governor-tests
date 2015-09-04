@@ -140,12 +140,13 @@ return [
         /*
          * Application Service Providers...
          */
-        LaravelGovernor\Providers\AppServiceProvider::class,
-        LaravelGovernor\Providers\AuthServiceProvider::class,
-        LaravelGovernor\Providers\EventServiceProvider::class,
-        LaravelGovernor\Providers\RouteServiceProvider::class,
+        LaravelGovernorTests\Providers\AppServiceProvider::class,
+        LaravelGovernorTests\Providers\AuthServiceProvider::class,
+        LaravelGovernorTests\Providers\EventServiceProvider::class,
+        LaravelGovernorTests\Providers\RouteServiceProvider::class,
 
         GeneaLabs\Jumpstart\JumpstartServiceProvider::class,
+        GeneaLabs\LaravelGovernor\Providers\LaravelGovernorServiceProvider::class,
     ],
 
     /*

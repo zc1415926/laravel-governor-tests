@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Exceptions;
+namespace LaravelGovernorTests\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Http\Controllers;
+namespace LaravelGovernorTests\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => LaravelGovernor\User::class,
+    'model' => LaravelGovernorTests\User::class,
 
     /*
     |--------------------------------------------------------------------------

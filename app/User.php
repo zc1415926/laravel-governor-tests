@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor;
+namespace LaravelGovernorTests;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

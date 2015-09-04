@@ -1,4 +1,4 @@
-<?php namespace LaravelGovernor\Http\Controllers;
+<?php namespace LaravelGovernorTests\Http\Controllers;
 
 class HomeController extends Controller {
 

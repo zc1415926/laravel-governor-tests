@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => LaravelGovernor\User::class,
+        'model'  => LaravelGovernorTests\User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

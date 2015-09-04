@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelGovernor\Providers;
+namespace LaravelGovernorTests\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
