@@ -1,5 +1,7 @@
 <?php
 
+use GeneaLabs\LaravelGovernor\Entity;
+use GeneaLabs\LaravelGovernor\Policies\EntityPolicy;
 use GeneaLabs\LaravelGovernor\Policies\RolePolicy;
 use GeneaLabs\LaravelGovernor\Role;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -23,6 +25,8 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     protected $unauthorizedUser;
     protected $role;
     protected $rolePolicy;
+    protected $entity;
+    protected $entityPolicy;
     protected $superAdminRole;
     protected $memberRole;
 
@@ -58,9 +62,13 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
         $this->superAdminUser->save();
 
         $this->rolePolicy = new RolePolicy();
+        $this->entityPolicy = new EntityPolicy();
+
         $this->superAdminRole = Role::where('name', 'SuperAdmin')->first();
         $this->memberRole = Role::where('name', 'Member')->first();
+
         $this->role = new Role();
+        $this->entity = new Entity();
 
         $this->memberUser = User::limit(2)->get()->last();
         $this->memberUser->roles()->save($this->memberRole);
