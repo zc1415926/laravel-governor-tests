@@ -1,6 +1,6 @@
 <?php
 
-class RolesViewTest extends TestCase
+class RolesIndexViewTest extends TestCase
 {
     /** @test */
     public function it_returns_403_for_user_without_roles()
