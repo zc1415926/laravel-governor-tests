@@ -1,6 +1,8 @@
 <?php
 
+use GeneaLabs\LaravelGovernor\Assignment;
 use GeneaLabs\LaravelGovernor\Entity;
+use GeneaLabs\LaravelGovernor\Policies\AssignmentPolicy;
 use GeneaLabs\LaravelGovernor\Policies\EntityPolicy;
 use GeneaLabs\LaravelGovernor\Policies\RolePolicy;
 use GeneaLabs\LaravelGovernor\Role;
@@ -27,6 +29,8 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     protected $rolePolicy;
     protected $entity;
     protected $entityPolicy;
+    protected $assignment;
+    protected $assignmentPolicy;
     protected $superAdminRole;
     protected $memberRole;
 
@@ -63,12 +67,14 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         $this->rolePolicy = new RolePolicy();
         $this->entityPolicy = new EntityPolicy();
+        $this->assignmentPolicy = new AssignmentPolicy();
 
         $this->superAdminRole = Role::where('name', 'SuperAdmin')->first();
         $this->memberRole = Role::where('name', 'Member')->first();
 
         $this->role = new Role();
         $this->entity = new Entity();
+        $this->assignment = new Assignment();
 
         $this->memberUser = User::limit(2)->get()->last();
         $this->memberUser->roles()->save($this->memberRole);
