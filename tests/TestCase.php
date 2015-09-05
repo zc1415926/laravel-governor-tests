@@ -8,7 +8,6 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
     use DatabaseMigrations;
     use DatabaseTransactions;
-//    use WithoutMiddleware;
 
     /**
      * The base URL to use while testing the application.
@@ -16,6 +15,8 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      * @var string
      */
     protected $baseUrl = 'http://localhost';
+    protected $superAdminUser;
+    protected $unauthorizedUser;
 
     /**
      * Creates the application.
@@ -24,16 +25,27 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      */
     public function createApplication()
     {
-        $app = require __DIR__.'/../bootstrap/app.php';
+        ini_set('xdebug.max_nesting_level', -1);
+        $app = require __DIR__ . '/../bootstrap/app.php';
 
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
-        ini_set('xdebug.max_nesting_level', -1);
 
         return $app;
     }
 
-    public function test_nothing()
+    public function prepare()
     {
-
+        $this->artisan('migrate', ['--path' => 'packages/genealabs/laravel-governor/database/migrations']);
+        $this->superAdminUser = factory(LaravelGovernorTests\User::class)->create();
+        $this->artisan('db:seed', ['--class' => 'LaravelGovernorDatabaseSeeder']);
+        $this->unauthorizedUser = factory(LaravelGovernorTests\User::class)->create();
+        $this->superAdminUser->fill([
+            'name' => 'Test User',
+            'first_name' => 'Test',
+            'last_name' => 'User',
+            'email' => 'testuser@noemail.com',
+            'password' => 'test123$',
+        ]);
+        $this->superAdminUser->save();
     }
 }
