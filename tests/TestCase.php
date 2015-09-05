@@ -8,7 +8,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
     use DatabaseMigrations;
     use DatabaseTransactions;
-    use WithoutMiddleware;
+//    use WithoutMiddleware;
 
     /**
      * The base URL to use while testing the application.
@@ -27,6 +27,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
         $app = require __DIR__.'/../bootstrap/app.php';
 
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+        ini_set('xdebug.max_nesting_level', -1);
 
         return $app;
     }
