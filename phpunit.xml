@@ -19,7 +19,13 @@
             <directory suffix=".php">packages/genealabs/laravel-governor/</directory>
         </whitelist>
         <blacklist>
-            <directory>packages/genealabs/laravel-governor/database</directory>
+            <directory>packages/genealabs/laravel-governor/database/</directory>
+            <directory>packages/genealabs/laravel-governor/resources/</directory>
+            <file>packages/genealabs/laravel-governor/src/Action.php</file>
+            <file>packages/genealabs/laravel-governor/src/Entity.php</file>
+            <file>packages/genealabs/laravel-governor/src/Ownership.php</file>
+            <file>packages/genealabs/laravel-governor/src/Permission.php</file>
+            <file>packages/genealabs/laravel-governor/src/Role.php</file>
         </blacklist>
     </filter>
     <php>
