@@ -18,6 +18,9 @@
         <whitelist>
             <directory suffix=".php">packages/genealabs/laravel-governor/</directory>
         </whitelist>
+        <blacklist>
+            <directory>packages/genealabs/laravel-governor/database</directory>
+        </blacklist>
     </filter>
     <php>
         <env name="APP_KEY" value="XGgKDIIj2qp8ADPGbVxiMmcEaW6z4pee"/>
