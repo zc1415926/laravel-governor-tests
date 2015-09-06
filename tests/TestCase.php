@@ -6,7 +6,6 @@ use GeneaLabs\LaravelGovernor\Policies\AssignmentPolicy;
 use GeneaLabs\LaravelGovernor\Policies\EntityPolicy;
 use GeneaLabs\LaravelGovernor\Policies\RolePolicy;
 use GeneaLabs\LaravelGovernor\Role;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use LaravelGovernorTests\User;
