@@ -17,6 +17,10 @@
     <filter>
         <whitelist>
             <directory suffix=".php">packages/genealabs/laravel-governor/</directory>
+            <exclude>
+                <directory suffix=".php">packages/genealabs/laravel-governor/database/</directory>
+                <directory suffix=".php">packages/genealabs/laravel-governor/resources/</directory>
+            </exclude>
         </whitelist>
     </filter>
     <php>
