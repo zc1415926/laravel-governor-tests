@@ -8,6 +8,7 @@ use GeneaLabs\LaravelGovernor\Policies\RolePolicy;
 use GeneaLabs\LaravelGovernor\Role;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Session;
 use LaravelGovernorTests\User;
 
 class TestCase extends Illuminate\Foundation\Testing\TestCase
@@ -51,6 +52,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
     public function prepare()
     {
+        Session::start();
         $this->artisan('migrate', ['--path' => 'packages/genealabs/laravel-governor/database/migrations']);
         $this->artisan('migrate', ['--path' => 'database/secondaryMigrations']);
         $this->superAdminUser = factory(LaravelGovernorTests\User::class)->create();
@@ -69,15 +71,13 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
         $this->entityPolicy = new EntityPolicy();
         $this->assignmentPolicy = new AssignmentPolicy();
 
-        $this->superAdminRole = Role::where('name', 'SuperAdmin')->first();
-        $this->memberRole = Role::where('name', 'Member')->first();
+        $this->superAdminRole = Role::find('SuperAdmin');
+        $this->memberRole = Role::find('Member');
 
         $this->role = new Role();
         $this->entity = new Entity();
         $this->assignment = new Assignment();
 
         $this->memberUser = User::limit(2)->get()->last();
-        $this->memberUser->roles()->save($this->memberRole);
-        $this->memberUser->save();
     }
 }
