@@ -1,6 +1,6 @@
 <?php
 
-use GeneaLabs\LaravelGovernor\Http\Requests\CreateEntityRequest;
+use GeneaLabs\LaravelGovernor\Http\Requests\UpdateEntityRequest;
 
 class UpdateEntityRequestTest extends TestCase
 {
@@ -9,7 +9,7 @@ class UpdateEntityRequestTest extends TestCase
     {
         $this->prepare();
 
-        $request = new CreateEntityRequest();
+        $request = new UpdateEntityRequest();
         $this->be($this->superAdminUser);
 
         $this->assertTrue($request->authorize());
@@ -22,7 +22,7 @@ class UpdateEntityRequestTest extends TestCase
     {
         $this->prepare();
 
-        $request = new CreateEntityRequest();
+        $request = new UpdateEntityRequest();
 
         $this->assertTrue(array_key_exists('name', $request->rules()));
         $this->assertEquals('required', $request->rules()['name']);
