@@ -6,7 +6,67 @@ use Illuminate\Support\Facades\Session;
 class RolesControllerTest extends TestCase
 {
     /** @test */
-    public function it_edits_role_for_user_with_superadmin_role()
+    public function it_shows_index_page()
+    {
+        $this->prepare();
+
+        $this->actingAs($this->superAdminUser)
+            ->get('genealabs/laravel-governor/roles/')
+            ->see('Roles')
+            ->see('Member')
+            ->see('SuperAdmin')
+            ->see('Add New Role');
+    }
+
+    /** @test */
+    public function it_shows_create_page()
+    {
+        $this->prepare();
+
+        $this->actingAs($this->superAdminUser)
+            ->get('genealabs/laravel-governor/roles/create')
+            ->see('Add Role')
+            ->see('Name')
+            ->see('Message')
+            ->see('Cancel')
+            ->see('Add Role');
+    }
+
+    /** @test */
+    public function it_shows_edit_page()
+    {
+        $this->prepare();
+
+        $this->actingAs($this->superAdminUser)
+            ->get('genealabs/laravel-governor/roles/Member/edit')
+            ->see('Edit Role')
+            ->see('Name')
+            ->see('Description')
+            ->see('Member')
+            ->see('Cancel')
+            ->see('Update Role');
+    }
+
+    /** @test */
+    public function it_adds_an_role()
+    {
+        $this->prepare();
+
+        $this->actingAs($this->superAdminUser)
+            ->post('genealabs/laravel-governor/roles', [
+                '_token' => csrf_token(),
+                'name' => 'TestRole',
+                'description' => 'This is a description for test users role.',
+            ]);
+
+        $this->seeInDatabase('roles', [
+            'name' => 'TestRole',
+            'description' => 'This is a description for test users role.',
+        ]);
+    }
+
+    /** @test */
+    public function it_updates_a_role()
     {
         $this->prepare();
 
@@ -52,7 +112,7 @@ class RolesControllerTest extends TestCase
     }
 
     /** @test */
-    public function it_can_delete_a_role_as_a_superadmin_user()
+    public function it_deletes_an_role()
     {
         $this->prepare();
 
