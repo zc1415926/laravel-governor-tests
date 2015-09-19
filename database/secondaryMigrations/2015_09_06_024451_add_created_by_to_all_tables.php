@@ -9,19 +9,17 @@ class AddCreatedByToAllTables extends Migration
         $user = app(config('auth.model'));
         $userIdFieldName = $user->getKeyName();
         $userTableName = $user->getTable();
-
-        if (Schema::hasTable('sqlite_master')) {
-            $tables = DB::table('sqlite_master')
-                ->where('type', 'table')
-                ->select(['name AS table_name'])
-                ->get();
-        } else {
-            $tables = DB::table('information_schema.tables')
-                ->where('table_schema', env('DB_DATABASE'))
-                ->where('table_type', 'BASE TABLE')
-                ->select(['table_name'])
-                ->get();
-        }
+//        $tables = DB::table('information_schema.tables')
+//            ->where('table_schema', env('DB_DATABASE'))
+//            ->where('table_type', 'BASE TABLE')
+//            ->select(['table_name'])
+//            ->get();
+//
+//        SELECT name FROM my_db.sqlite_master WHERE type='table';
+        $tables = DB::table('sqlite_master')
+            ->where('type', 'table')
+            ->select(['name AS table_name'])
+            ->get();
 
         foreach ($tables as $tableInfo) {
             if (Schema::hasColumn($tableInfo->table_name, 'created_by')) {
@@ -41,18 +39,16 @@ class AddCreatedByToAllTables extends Migration
 
     public function down()
     {
-        if (Schema::hasTable('sqlite_master')) {
-            $tables = DB::table('sqlite_master')
-                ->where('type', 'table')
-                ->select(['name AS table_name'])
-                ->get();
-        } else {
-            $tables = DB::table('information_schema.tables')
-                ->where('table_schema', env('DB_DATABASE'))
-                ->where('table_type', 'BASE TABLE')
-                ->select(['table_name'])
-                ->get();
-        }
+//        $tables = DB::table('information_schema.tables')
+//            ->where('table_schema', env('DB_DATABASE'))
+//            ->where('table_type', 'BASE TABLE')
+//            ->select(['table_name'])
+//            ->get();
+        $tables = DB::table('sqlite_master')
+            ->where('type', 'table')
+            ->select(['name AS table_name'])
+            ->get();
+
 
         foreach ($tables as $tableInfo) {
             if (Schema::hasColumn($tableInfo->table_name, 'created_by')) {
