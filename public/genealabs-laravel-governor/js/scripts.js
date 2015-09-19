@@ -14,12 +14,10 @@
         if ($(this).text().indexOf(' no') > 0) {
             className = 'text-danger';
         }
-        console.log($(this).text().indexOf(' no'));
-        console.log($(this).text().indexOf(' any'));
+
         if ($(this).text().indexOf(' any') > 0) {
             className = 'text-success';
         }
-        console.log(className);
 
         $('#permissions-' + $(this).data('entity') + '-' + $(this).data('action')).val($(this).text());
         $('#selected-' + $(this).data('entity') + '-' + $(this).data('action')).text($(this).text())
@@ -37,12 +35,12 @@
   initializeCollapsers = function() {
     $('.collapse').collapse({
       hide: true
-    });
-    $('.collapse').on('show', '.collapse', function() {
-      console.log('test');
+    }).on('show', '.collapse', function() {
       $('.collapse.in').collapse('hide');
+
       return null;
     });
+
     return null;
   };
 
