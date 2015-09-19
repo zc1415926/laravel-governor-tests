@@ -19,7 +19,7 @@
             className = 'text-success';
         }
 
-        $('#permissions-' + $(this).data('entity') + '-' + $(this).data('action')).val($(this).text());
+        $('#permissions-' + $(this).data('entity') + '-' + $(this).data('action')).val($(this).text().replace($(this).data('action') + ' ', ''));
         $('#selected-' + $(this).data('entity') + '-' + $(this).data('action')).text($(this).text())
             .removeClass('text-info')
             .removeClass('text-success')
@@ -35,7 +35,8 @@
   initializeCollapsers = function() {
     $('.collapse').collapse({
       hide: true
-    }).on('show', '.collapse', function() {
+    });
+    $('.collapse').on('show', '.collapse', function() {
       $('.collapse.in').collapse('hide');
 
       return null;
