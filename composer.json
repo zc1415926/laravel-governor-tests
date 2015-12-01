@@ -4,13 +4,20 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "./packages/genealabs/laravel-governor"
+    }
+  ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "genealabs/jumpstart": "^0.1.4",
         "doctrine/dbal": "^2.5",
         "genealabs/bones-macros": "^0.2.33",
-        "laravelcollective/html": "^5.1"
+        "laravelcollective/html": "^5.1",
+      "genealabs/laravel-governor": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -25,8 +32,7 @@
             "packages/genealabs/laravel-governor/database"
         ],
         "psr-4": {
-            "LaravelGovernorTests\\": "app/",
-            "GeneaLabs\\LaravelGovernor\\": "packages/genealabs/laravel-governor/src/"
+            "LaravelGovernorTests\\": "app/"
         }
     },
     "autoload-dev": {
@@ -43,7 +49,10 @@
             "php artisan clear-compiled"
         ],
         "post-update-cmd": [
-            "php artisan optimize"
+            "php artisan optimize",
+          "php artisan ide-helper:meta",
+          "php artisan ide-helper:models",
+          "php artisan ide-helper:generate"
         ],
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""

@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2015-09-06.
+    * Generated on 2015-12-01.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -19,7 +19,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \LaravelGovernorTests\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \LaravelGovernorTests\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \LaravelGovernorTests\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -28,6 +27,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -64,6 +64,7 @@ namespace PHPSTORM_META {
             'command.route.clear' instanceof \Illuminate\Foundation\Console\RouteClearCommand,
             'command.route.list' instanceof \Illuminate\Foundation\Console\RouteListCommand,
             'command.serve' instanceof \Illuminate\Foundation\Console\ServeCommand,
+            'command.test.make' instanceof \Illuminate\Foundation\Console\TestMakeCommand,
             'command.tinker' instanceof \Illuminate\Foundation\Console\TinkerCommand,
             'command.up' instanceof \Illuminate\Foundation\Console\UpCommand,
             'command.vendor.publish' instanceof \Illuminate\Foundation\Console\VendorPublishCommand,
@@ -132,7 +133,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \LaravelGovernorTests\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \LaravelGovernorTests\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \LaravelGovernorTests\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -141,6 +141,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -177,6 +178,7 @@ namespace PHPSTORM_META {
             'command.route.clear' instanceof \Illuminate\Foundation\Console\RouteClearCommand,
             'command.route.list' instanceof \Illuminate\Foundation\Console\RouteListCommand,
             'command.serve' instanceof \Illuminate\Foundation\Console\ServeCommand,
+            'command.test.make' instanceof \Illuminate\Foundation\Console\TestMakeCommand,
             'command.tinker' instanceof \Illuminate\Foundation\Console\TinkerCommand,
             'command.up' instanceof \Illuminate\Foundation\Console\UpCommand,
             'command.vendor.publish' instanceof \Illuminate\Foundation\Console\VendorPublishCommand,
@@ -245,7 +247,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \LaravelGovernorTests\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \LaravelGovernorTests\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \LaravelGovernorTests\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -254,6 +255,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -290,6 +292,7 @@ namespace PHPSTORM_META {
             'command.route.clear' instanceof \Illuminate\Foundation\Console\RouteClearCommand,
             'command.route.list' instanceof \Illuminate\Foundation\Console\RouteListCommand,
             'command.serve' instanceof \Illuminate\Foundation\Console\ServeCommand,
+            'command.test.make' instanceof \Illuminate\Foundation\Console\TestMakeCommand,
             'command.tinker' instanceof \Illuminate\Foundation\Console\TinkerCommand,
             'command.up' instanceof \Illuminate\Foundation\Console\UpCommand,
             'command.vendor.publish' instanceof \Illuminate\Foundation\Console\VendorPublishCommand,
@@ -358,7 +361,6 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Http\Kernel' instanceof \LaravelGovernorTests\Http\Kernel,
             'Illuminate\Contracts\Console\Kernel' instanceof \LaravelGovernorTests\Console\Kernel,
             'Illuminate\Contracts\Debug\ExceptionHandler' instanceof \LaravelGovernorTests\Exceptions\Handler,
-            'Psr\Log\LoggerInterface' instanceof \Monolog\Logger,
             'auth' instanceof \Illuminate\Auth\AuthManager,
             'auth.driver' instanceof \Illuminate\Auth\Guard,
             'Illuminate\Contracts\Auth\Access\Gate' instanceof \Illuminate\Auth\Access\Gate,
@@ -367,6 +369,7 @@ namespace PHPSTORM_META {
             'Illuminate\Contracts\Queue\EntityResolver' instanceof \Illuminate\Database\Eloquent\QueueEntityResolver,
             'db.factory' instanceof \Illuminate\Database\Connectors\ConnectionFactory,
             'db' instanceof \Illuminate\Database\DatabaseManager,
+            'db.connection' instanceof \Illuminate\Database\MySqlConnection,
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
@@ -403,6 +406,7 @@ namespace PHPSTORM_META {
             'command.route.clear' instanceof \Illuminate\Foundation\Console\RouteClearCommand,
             'command.route.list' instanceof \Illuminate\Foundation\Console\RouteListCommand,
             'command.serve' instanceof \Illuminate\Foundation\Console\ServeCommand,
+            'command.test.make' instanceof \Illuminate\Foundation\Console\TestMakeCommand,
             'command.tinker' instanceof \Illuminate\Foundation\Console\TinkerCommand,
             'command.up' instanceof \Illuminate\Foundation\Console\UpCommand,
             'command.vendor.publish' instanceof \Illuminate\Foundation\Console\VendorPublishCommand,
