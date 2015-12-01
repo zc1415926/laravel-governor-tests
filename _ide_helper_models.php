@@ -10,6 +10,17 @@
 
 namespace LaravelGovernorTests{
 /**
+ * LaravelGovernorTests\Team
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection|\config('auth.model')[] $users
+ * @property-read \config('auth.model') $owner
+ * @property-read \Illuminate\Database\Eloquent\Collection|Invitation[] $invitations
+ */
+	class Team {}
+}
+
+namespace LaravelGovernorTests{
+/**
  * LaravelGovernorTests\User
  *
  * @property integer $id
@@ -22,6 +33,7 @@ namespace LaravelGovernorTests{
  * @property string $first_name
  * @property string $last_name
  * @property string $deleted_at
+ * @property-read mixed $using_two_factor_auth
  * @property-read \Illuminate\Database\Eloquent\Collection|Role[] $roles
  * @property-read mixed $is_super_admin
  * @method static \Illuminate\Database\Query\Builder|\LaravelGovernorTests\User whereId($value)
