@@ -1,6 +1,6 @@
 <?php
 
-class RolesCreateViewTest extends TestCase
+class RolesCreateViewTest extends \TestCase
 {
     /** @test */
     public function it_returns_403_for_user_without_roles()
@@ -18,7 +18,7 @@ class RolesCreateViewTest extends TestCase
     {
         $this->prepare();
 
-        $response = $this->actingAs($this->superAdminUser)
+        $this->actingAs($this->superAdminUser)
             ->visit('genealabs/laravel-governor/roles/create')
             ->see('Roles');
     }
@@ -28,12 +28,11 @@ class RolesCreateViewTest extends TestCase
     {
         $this->prepare();
 
-        $response = $this->actingAs($this->superAdminUser)
+        $this->actingAs($this->superAdminUser)
             ->visit('genealabs/laravel-governor/roles/create')
             ->type('Test Users', 'name')
             ->type('This is a description for test users role.', 'description')
             ->press('Add Role')
-            ->see('Test Users')
-            ->onPage('genealabs/laravel-governor/roles');
+            ->see('Test Users');
     }
 }

@@ -15,21 +15,17 @@
         "laravel/framework": "5.1.*",
         "genealabs/jumpstart": "^0.1.4",
         "doctrine/dbal": "^2.5",
-        "genealabs/bones-macros": "^0.2.33",
-        "laravelcollective/html": "^5.1",
       "genealabs/laravel-governor": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1",
+        "phpunit/phpunit": "*",
         "barryvdh/laravel-ide-helper": "^2.1"
     },
     "autoload": {
         "classmap": [
-            "database",
-            "packages/genealabs/laravel-governor/database"
+            "database"
         ],
         "psr-4": {
             "LaravelGovernorTests\\": "app/"

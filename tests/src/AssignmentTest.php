@@ -53,8 +53,7 @@ class AssignmentTest extends TestCase
             ->type('TestUsers', 'name')
             ->type('This is a description for test users role.', 'description')
             ->press('Add Role')
-            ->see('TestUsers')
-            ->onPage('genealabs/laravel-governor/roles');
+            ->see('TestUsers');
         $this->assignment->assignUsersToRoles(['TestUsers' => [$this->memberUser->id]]);
         $this->assertTrue($this->memberUser->roles->contains('TestUsers'));
     }
@@ -79,8 +78,7 @@ class AssignmentTest extends TestCase
             ->type('TestUsers', 'name')
             ->type('This is a description for test users role.', 'description')
             ->press('Add Role')
-            ->see('TestUsers')
-            ->onPage('genealabs/laravel-governor/roles');
+            ->see('TestUsers');
         $this->assignment->assignUsersToRoles(['TestUsers' => [$this->memberUser->id]]);
         $this->assertTrue($this->memberUser->roles->contains('TestUsers'));
 

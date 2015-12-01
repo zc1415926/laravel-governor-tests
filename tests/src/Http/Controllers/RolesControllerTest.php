@@ -121,8 +121,7 @@ class RolesControllerTest extends TestCase
             ->type('TestRole', 'name')
             ->type('This is a description for test users role.', 'description')
             ->press('Add Role')
-            ->see('TestRole')
-            ->onPage('genealabs/laravel-governor/roles');
+            ->see('TestRole');
 
         $response = $this->actingAs($this->superAdminUser)
             ->delete('genealabs/laravel-governor/roles/TestRole', [
