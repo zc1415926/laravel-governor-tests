@@ -59,7 +59,7 @@ return [
     */
 
     'password' => [
-        'email' => 'emails.password',
+        'email' => 'spark::emails.auth.password.email',
         'table' => 'password_resets',
         'expire' => 60,
     ],

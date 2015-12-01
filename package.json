@@ -4,7 +4,11 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
-    "laravel-elixir": "^3.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "babel-preset-es2015": "^6.1.18",
+    "babel-runtime": "^6.2.0",
+    "bootstrap-sass": "^3.0.0",
+    "laravel-elixir": "^4.0.0",
+    "laravel-elixir-vueify": "^1.0.0",
+    "laravel-spark": "file:vendor/laravel/spark/resources/assets/js"
   }
 }

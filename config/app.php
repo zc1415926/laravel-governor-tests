@@ -144,6 +144,13 @@ return [
         LaravelGovernorTests\Providers\AuthServiceProvider::class,
         LaravelGovernorTests\Providers\EventServiceProvider::class,
         LaravelGovernorTests\Providers\RouteServiceProvider::class,
+        LaravelGovernorTests\Providers\SparkServiceProvider::class,
+
+        /**
+         * Spark Service Providers...
+         */
+        Laravel\Spark\Providers\SparkServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
 
         GeneaLabs\Jumpstart\JumpstartServiceProvider::class,
         GeneaLabs\LaravelGovernor\Providers\LaravelGovernorServiceProvider::class,
@@ -198,8 +205,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
