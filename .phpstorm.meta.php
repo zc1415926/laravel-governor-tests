@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2015-12-01.
+    * Generated on 2015-12-02.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -44,6 +44,8 @@ namespace PHPSTORM_META {
             'Laravel\Spark\Contracts\Repositories\TeamRepository' instanceof \Laravel\Spark\Repositories\TeamRepository,
             'Laravel\Cashier\BillableRepositoryInterface' instanceof \Laravel\Cashier\EloquentBillableRepository,
             'command.cashier.table' instanceof \Laravel\Cashier\CashierTableCommand,
+            'html' instanceof \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder,
+            'form' instanceof \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
@@ -161,6 +163,8 @@ namespace PHPSTORM_META {
             'Laravel\Spark\Contracts\Repositories\TeamRepository' instanceof \Laravel\Spark\Repositories\TeamRepository,
             'Laravel\Cashier\BillableRepositoryInterface' instanceof \Laravel\Cashier\EloquentBillableRepository,
             'command.cashier.table' instanceof \Laravel\Cashier\CashierTableCommand,
+            'html' instanceof \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder,
+            'form' instanceof \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
@@ -278,6 +282,8 @@ namespace PHPSTORM_META {
             'Laravel\Spark\Contracts\Repositories\TeamRepository' instanceof \Laravel\Spark\Repositories\TeamRepository,
             'Laravel\Cashier\BillableRepositoryInterface' instanceof \Laravel\Cashier\EloquentBillableRepository,
             'command.cashier.table' instanceof \Laravel\Cashier\CashierTableCommand,
+            'html' instanceof \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder,
+            'form' instanceof \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,
@@ -395,6 +401,8 @@ namespace PHPSTORM_META {
             'Laravel\Spark\Contracts\Repositories\TeamRepository' instanceof \Laravel\Spark\Repositories\TeamRepository,
             'Laravel\Cashier\BillableRepositoryInterface' instanceof \Laravel\Cashier\EloquentBillableRepository,
             'command.cashier.table' instanceof \Laravel\Cashier\CashierTableCommand,
+            'html' instanceof \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder,
+            'form' instanceof \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'command.app.name' instanceof \Illuminate\Foundation\Console\AppNameCommand,
             'command.clear-compiled' instanceof \Illuminate\Foundation\Console\ClearCompiledCommand,

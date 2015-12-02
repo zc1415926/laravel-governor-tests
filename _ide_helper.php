@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.1.25 (LTS) on 2015-12-01.
+ * Generated for Laravel 5.1.25 (LTS) on 2015-12-02.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12065,6 +12065,892 @@ namespace {
          */
         public static function getNames(){
             return \Illuminate\View\Factory::getNames();
+        }
+        
+    }
+
+
+    class Form extends \GeneaLabs\Bones\Macros\BonesMacrosFormFacade{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function cancelButton(){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::cancelButton();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function selectRangeWithInterval($name, $start, $end, $interval, $default = null, $attributes = array()){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::selectRangeWithInterval($name, $start, $end, $interval, $default, $attributes);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_open($options = array(), $errors = null, $labelWidth = 3, $fieldWidth = 9, $offset = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_open($options, $errors, $labelWidth, $fieldWidth, $offset);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_model($model, $options = array(), $errors = null, $labelWidth = 3, $fieldWidth = 9, $offset = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_model($model, $options, $errors, $labelWidth, $fieldWidth, $offset);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_inputGroup($label, $name, $innerHtml, $attributes = array(), $preAddonHtml = null, $postAddonHtml = null, $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_inputGroup($label, $name, $innerHtml, $attributes, $preAddonHtml, $postAddonHtml, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_selectRangeWithInterval($label, $name, $start, $end, $interval, $default = null, $attributes = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_selectRangeWithInterval($label, $name, $start, $end, $interval, $default, $attributes, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_combobox($label, $name, $list = array(), $selected = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_combobox($label, $name, $list, $selected, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_select($label, $name, $list = array(), $selected = null, $options = array(), $extraElement = null, $extraWidth = 0, $useLabelAsPlaceholder = false){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_select($label, $name, $list, $selected, $options, $extraElement, $extraWidth, $useLabelAsPlaceholder);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_selectWithIcons($label, $name, $list = array(), $icons = array(), $selected = null, $options = array(), $extraElement = null, $extraWidth = 0, $useLabelAsPlaceholder = false){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_selectWithIcons($label, $name, $list, $icons, $selected, $options, $extraElement, $extraWidth, $useLabelAsPlaceholder);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_getSelectOption($display, $value, $selected, $icon){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_getSelectOption($display, $value, $selected, $icon);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_text($label, $name, $value = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_text($label, $name, $value, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_password($label, $name, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_password($label, $name, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_email($label, $name, $value = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_email($label, $name, $value, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_url($label, $name, $value = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_url($label, $name, $value, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_file($label, $name, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_file($label, $name, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_textarea($label, $name, $value = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_textarea($label, $name, $value, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_checkbox($label, $name, $value = 1, $checked = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_checkbox($label, $name, $value, $checked, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_switch($label, $name, $value = 1, $checked = null, $options = array(), $extraElement = null, $extraWidth = 0){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_switch($label, $name, $value, $checked, $options, $extraElement, $extraWidth);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function bs_submit($label = null, $value = null, $options = array(), $cancelUrl = null){
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::bs_submit($label, $value, $options, $cancelUrl);
+        }
+        
+        /**
+         * Open up a new HTML form.
+         *
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function open($options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::open($options);
+        }
+        
+        /**
+         * Create a new model based form builder.
+         *
+         * @param mixed $model
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function model($model, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::model($model, $options);
+        }
+        
+        /**
+         * Set the model instance on the form builder.
+         *
+         * @param mixed $model
+         * @return void 
+         * @static 
+         */
+        public static function setModel($model){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::setModel($model);
+        }
+        
+        /**
+         * Close the current form.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function close(){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::close();
+        }
+        
+        /**
+         * Generate a hidden field with the current CSRF token.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function token(){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::token();
+        }
+        
+        /**
+         * Create a form label element.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function label($name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::label($name, $value, $options);
+        }
+        
+        /**
+         * Create a form input field.
+         *
+         * @param string $type
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function input($type, $name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::input($type, $name, $value, $options);
+        }
+        
+        /**
+         * Create a text input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function text($name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::text($name, $value, $options);
+        }
+        
+        /**
+         * Create a password input field.
+         *
+         * @param string $name
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function password($name, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::password($name, $options);
+        }
+        
+        /**
+         * Create a hidden input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function hidden($name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::hidden($name, $value, $options);
+        }
+        
+        /**
+         * Create an e-mail input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function email($name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::email($name, $value, $options);
+        }
+        
+        /**
+         * Create a url input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function url($name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::url($name, $value, $options);
+        }
+        
+        /**
+         * Create a file input field.
+         *
+         * @param string $name
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function file($name, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::file($name, $options);
+        }
+        
+        /**
+         * Create a textarea input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function textarea($name, $value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::textarea($name, $value, $options);
+        }
+        
+        /**
+         * Create a select box field.
+         *
+         * @param string $name
+         * @param array $list
+         * @param string $selected
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function select($name, $list = array(), $selected = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::select($name, $list, $selected, $options);
+        }
+        
+        /**
+         * Create a select range field.
+         *
+         * @param string $name
+         * @param string $begin
+         * @param string $end
+         * @param string $selected
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function selectRange($name, $begin, $end, $selected = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::selectRange($name, $begin, $end, $selected, $options);
+        }
+        
+        /**
+         * Create a select year field.
+         *
+         * @param string $name
+         * @param string $begin
+         * @param string $end
+         * @param string $selected
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function selectYear(){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::selectYear();
+        }
+        
+        /**
+         * Create a select month field.
+         *
+         * @param string $name
+         * @param string $selected
+         * @param array $options
+         * @param string $format
+         * @return string 
+         * @static 
+         */
+        public static function selectMonth($name, $selected = null, $options = array(), $format = '%B'){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::selectMonth($name, $selected, $options, $format);
+        }
+        
+        /**
+         * Get the select option for the given value.
+         *
+         * @param string $display
+         * @param string $value
+         * @param string $selected
+         * @return string 
+         * @static 
+         */
+        public static function getSelectOption($display, $value, $selected){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::getSelectOption($display, $value, $selected);
+        }
+        
+        /**
+         * Create a checkbox input field.
+         *
+         * @param string $name
+         * @param mixed $value
+         * @param bool $checked
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function checkbox($name, $value = 1, $checked = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::checkbox($name, $value, $checked, $options);
+        }
+        
+        /**
+         * Create a radio button input field.
+         *
+         * @param string $name
+         * @param mixed $value
+         * @param bool $checked
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function radio($name, $value = null, $checked = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::radio($name, $value, $checked, $options);
+        }
+        
+        /**
+         * Create a HTML reset input element.
+         *
+         * @param string $value
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function reset($value, $attributes = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::reset($value, $attributes);
+        }
+        
+        /**
+         * Create a HTML image input element.
+         *
+         * @param string $url
+         * @param string $name
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function image($url, $name = null, $attributes = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::image($url, $name, $attributes);
+        }
+        
+        /**
+         * Create a submit button element.
+         *
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function submit($value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::submit($value, $options);
+        }
+        
+        /**
+         * Create a button element.
+         *
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */
+        public static function button($value = null, $options = array()){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::button($value, $options);
+        }
+        
+        /**
+         * Get the ID attribute for a field name.
+         *
+         * @param string $name
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function getIdAttribute($name, $attributes){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::getIdAttribute($name, $attributes);
+        }
+        
+        /**
+         * Get the value that should be assigned to the field.
+         *
+         * @param string $name
+         * @param string $value
+         * @return string 
+         * @static 
+         */
+        public static function getValueAttribute($name, $value = null){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::getValueAttribute($name, $value);
+        }
+        
+        /**
+         * Get a value from the session's old input.
+         *
+         * @param string $name
+         * @return string 
+         * @static 
+         */
+        public static function old($name){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::old($name);
+        }
+        
+        /**
+         * Determine if the old input is empty.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function oldInputIsEmpty(){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::oldInputIsEmpty();
+        }
+        
+        /**
+         * Get the session store implementation.
+         *
+         * @return \Illuminate\Session\Store $session
+         * @static 
+         */
+        public static function getSessionStore(){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::getSessionStore();
+        }
+        
+        /**
+         * Set the session store implementation.
+         *
+         * @param \Illuminate\Session\Store $session
+         * @return $this 
+         * @static 
+         */
+        public static function setSessionStore($session){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::setSessionStore($session);
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param callable $macro
+         * @return void 
+         * @static 
+         */
+        public static function macro($name, $macro){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::macro($name, $macro);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */
+        public static function hasMacro($name){
+            //Method inherited from \Illuminate\Html\FormBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosFormBuilder::hasMacro($name);
+        }
+        
+    }
+
+
+    class HTML extends \GeneaLabs\Bones\Macros\BonesMacrosHtmlFacade{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function slugify($text){
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::slugify($text);
+        }
+        
+        /**
+         * Convert an HTML string to entities.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */
+        public static function entities($value){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::entities($value);
+        }
+        
+        /**
+         * Convert entities to HTML characters.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */
+        public static function decode($value){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::decode($value);
+        }
+        
+        /**
+         * Generate a link to a JavaScript file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return string 
+         * @static 
+         */
+        public static function script($url, $attributes = array(), $secure = null){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::script($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a link to a CSS file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return string 
+         * @static 
+         */
+        public static function style($url, $attributes = array(), $secure = null){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::style($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate an HTML image element.
+         *
+         * @param string $url
+         * @param string $alt
+         * @param array $attributes
+         * @param bool $secure
+         * @return string 
+         * @static 
+         */
+        public static function image($url, $alt = null, $attributes = array(), $secure = null){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::image($url, $alt, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTML link.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @param bool $secure
+         * @return string 
+         * @static 
+         */
+        public static function link($url, $title = null, $attributes = array(), $secure = null){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::link($url, $title, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTTPS HTML link.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function secureLink($url, $title = null, $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::secureLink($url, $title, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to an asset.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @param bool $secure
+         * @return string 
+         * @static 
+         */
+        public static function linkAsset($url, $title = null, $attributes = array(), $secure = null){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::linkAsset($url, $title, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTTPS HTML link to an asset.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function linkSecureAsset($url, $title = null, $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::linkSecureAsset($url, $title, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to a named route.
+         *
+         * @param string $name
+         * @param string $title
+         * @param array $parameters
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function linkRoute($name, $title = null, $parameters = array(), $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::linkRoute($name, $title, $parameters, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to a controller action.
+         *
+         * @param string $action
+         * @param string $title
+         * @param array $parameters
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function linkAction($action, $title = null, $parameters = array(), $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::linkAction($action, $title, $parameters, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to an email address.
+         *
+         * @param string $email
+         * @param string $title
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function mailto($email, $title = null, $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::mailto($email, $title, $attributes);
+        }
+        
+        /**
+         * Obfuscate an e-mail address to prevent spam-bots from sniffing it.
+         *
+         * @param string $email
+         * @return string 
+         * @static 
+         */
+        public static function email($email){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::email($email);
+        }
+        
+        /**
+         * Generate an ordered list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function ol($list, $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::ol($list, $attributes);
+        }
+        
+        /**
+         * Generate an un-ordered list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function ul($list, $attributes = array()){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::ul($list, $attributes);
+        }
+        
+        /**
+         * Build an HTML attribute string from an array.
+         *
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */
+        public static function attributes($attributes){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::attributes($attributes);
+        }
+        
+        /**
+         * Obfuscate a string to prevent spam-bots from sniffing it.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */
+        public static function obfuscate($value){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::obfuscate($value);
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param callable $macro
+         * @return void 
+         * @static 
+         */
+        public static function macro($name, $macro){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::macro($name, $macro);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */
+        public static function hasMacro($name){
+            //Method inherited from \Illuminate\Html\HtmlBuilder            
+            return \GeneaLabs\Bones\Macros\BonesMacrosHtmlBuilder::hasMacro($name);
         }
         
     }

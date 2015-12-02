@@ -34,6 +34,8 @@ namespace LaravelGovernorTests{
  * @property string $last_name
  * @property string $deleted_at
  * @property-read mixed $using_two_factor_auth
+ * @property-read \Illuminate\Database\Eloquent\Collection|Role[] $roles
+ * @property-read mixed $is_super_admin
  * @method static \Illuminate\Database\Query\Builder|\LaravelGovernorTests\User whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\LaravelGovernorTests\User whereName($value)
  * @method static \Illuminate\Database\Query\Builder|\LaravelGovernorTests\User whereEmail($value)

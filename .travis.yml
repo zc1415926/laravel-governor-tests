@@ -9,19 +9,20 @@ php:
 
 # Commands to be run before your environment runs.
 before_script:
-  - mkdir -p build/logs
   - composer self-update
   - composer install --prefer-source --no-interaction
-  - composer require satooshi/php-coveralls:~0.6@stable
 
 # Commands you want to run that will verify your build.
 script:
-  - phpunit --coverage-clover build/logs/clover.xml
+  - mkdir -p build/logs
+  - phpunit vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 # allow_failures: Allow this build to fail under the specified environments.
 # fast_finish: If your build fails do not continue trying to build, just stop.
 matrix:
   fast_finish: true
+  allow_failures:
+    - php: 5.5
 
 # Customize when the notification emails are sent.
 notifications:
