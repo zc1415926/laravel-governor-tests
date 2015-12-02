@@ -154,7 +154,6 @@ return [
 
         GeneaLabs\Jumpstart\JumpstartServiceProvider::class,
         GeneaLabs\LaravelGovernor\Providers\LaravelGovernorServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
 
@@ -204,7 +203,6 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
     ],
 
 ];

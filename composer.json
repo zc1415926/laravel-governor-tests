@@ -8,14 +8,14 @@
     {
       "type": "path",
       "url": "./packages/genealabs/laravel-governor"
-    }
+   }
   ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "genealabs/jumpstart": "^0.1.4",
         "doctrine/dbal": "^2.5",
-      "genealabs/laravel-governor": "*",
+      "genealabs/laravel-governor": "*@dev",
         "laravel/spark": "~0.1.0"
     },
     "require-dev": {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7cafdcc8e302e9b698dde4968f9d14e2",
-    "content-hash": "2e9dca00442988753973d490e6c7ad5c",
+    "hash": "3dbf4dcf95765a4a0edfabfc17cab0aa",
+    "content-hash": "c9625b38013bd1bf29768113e7e5d128",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -751,29 +751,17 @@
         },
         {
             "name": "genealabs/laravel-governor",
-            "version": "0.1.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GeneaLabs/laravel-governor.git",
-                "reference": "8448efcec3979f7f2f794160180e3ea6861b3987"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GeneaLabs/laravel-governor/zipball/8448efcec3979f7f2f794160180e3ea6861b3987",
-                "reference": "8448efcec3979f7f2f794160180e3ea6861b3987",
-                "shasum": ""
+                "type": "path",
+                "url": "./packages/genealabs/laravel-governor/",
+                "reference": "2b39a55ff7c2fc14d849b9a9de3e1527",
+                "shasum": null
             },
             "require": {
                 "genealabs/bones-macros": "^0.2.33",
                 "illuminate/support": "^5.1",
-                "laravelcollective/html": "^5.1",
                 "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "fzaninotto/faker": "~1.4",
-                "mockery/mockery": "0.9.*",
-                "orchestra/testbench": "~3.1",
-                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "autoload": {
@@ -782,11 +770,9 @@
                     "database/seeds"
                 ],
                 "psr-4": {
-                    "GeneaLabs\\LaravelGovernor\\": "src/",
-                    "GeneaLabs\\LaravelGovernor\\Tests\\": "tests/"
+                    "GeneaLabs\\LaravelGovernor\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -796,8 +782,7 @@
                     "email": "hello@genealabs.com"
                 }
             ],
-            "description": "Managing policy and control in Laravel.",
-            "time": "2015-09-29 21:35:53"
+            "description": "Managing policy and control in Laravel."
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1396,56 +1381,6 @@
                 "stripe"
             ],
             "time": "2015-10-23 02:58:32"
-        },
-        {
-            "name": "laravelcollective/html",
-            "version": "v5.1.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "f62269629b2a1093039733517bd7e75b3f98dffb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/f62269629b2a1093039733517bd7e75b3f98dffb",
-                "reference": "f62269629b2a1093039733517bd7e75b3f98dffb",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "5.1.*",
-                "illuminate/routing": "5.1.*",
-                "illuminate/session": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Collective\\Html\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                },
-                {
-                    "name": "Adam Engebretson",
-                    "email": "adam@laravelcollective.com"
-                }
-            ],
-            "time": "2015-11-28 08:27:09"
         },
         {
             "name": "league/flysystem",
@@ -4138,7 +4073,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "genealabs/laravel-governor": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
